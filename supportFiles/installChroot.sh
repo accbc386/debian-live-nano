@@ -4,6 +4,7 @@ set -e
 
 echo Set hostname
 echo "debian-live-nano" > /etc/hostname
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
 # Set as non-interactive so apt does not prompt for user input
 export DEBIAN_FRONTEND=noninteractive
