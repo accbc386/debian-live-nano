@@ -19,7 +19,7 @@ apt-get -y upgrade
 echo Install packages
 apt-get install -y --no-install-recommends linux-image-amd64 live-boot systemd-sysv systemd-resolved systemd-timesyncd
 apt-get install -y e2fsprogs 
-apt install --fix-missing zstd clonezilla 
+apt install -y --fix-missing zstd clonezilla 
 echo Clean apt post-install
 apt-get clean
 
