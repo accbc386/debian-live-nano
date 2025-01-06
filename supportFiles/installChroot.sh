@@ -19,7 +19,7 @@ apt-get -y upgrade
 echo Install packages
 apt-get install -y --no-install-recommends linux-image-amd64 live-boot systemd-sysv systemd-resolved systemd-timesyncd clonezilla zstd
 apt-get install -f -y -t stable zstd clonezilla
-apt-get install -f -y -t stable e2fsprogs bash-completion cifs-utils curl dbus dosfstools firmware-linux-free gddrescue gdisk iputils-ping isc-dhcp-client less nfs-common ntfs-3g openssh-client open-vm-tools procps vim wimtools wget
+apt-get install -f -y e2fsprogs bash-completion cifs-utils curl dbus dosfstools firmware-linux-free gddrescue gdisk iputils-ping isc-dhcp-client less nfs-common ntfs-3g openssh-client open-vm-tools procps vim wimtools wget
 
 echo Clean apt post-install
 apt-get clean
