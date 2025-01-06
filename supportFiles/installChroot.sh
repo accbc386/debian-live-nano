@@ -17,7 +17,7 @@ apt-get -y upgrade
 /bin/bash /customize.sh
 
 echo Install packages
-apt-get install -y --no-install-recommends linux-image-amd64 live-boot systemd-sysv systemd-resolved systemd-timesyncd
+apt-get install -y --no-install-recommends linux-image-amd64 live-boot systemd-sysv systemd-resolved systemd-timesyncd zstd
 apt-get install -f -y -t stable zstd
 apt-get install -f -y e2fsprogs 
 
