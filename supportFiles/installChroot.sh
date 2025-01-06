@@ -17,6 +17,9 @@ apt-get -y upgrade
 /bin/bash /customize.sh
 
 echo Install packages
+apt-get install -y --no-install-recommends linux-image-amd64 live-boot systemd-sysv
+apt-get install -y bash-completion cifs-utils curl dbus dosfstools firmware-linux-free gddrescue gdisk iputils-ping isc-dhcp-client less nfs-common ntfs-3g openssh-client open-vm-tools procps vim wimtools wget
+
 apt-get install -y --no-install-recommends linux-image-amd64 live-boot systemd-sysv systemd-resolved systemd-timesyncd clonezilla zstd
 apt-get install -f -y -t stable zstd clonezilla 
 apt-get install  -y e2fsprogs 
