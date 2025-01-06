@@ -4,10 +4,10 @@ set -e
 
 echo Set hostname
 echo "debian-live-nano" > /etc/hostname
-echo "nameserver 8.8.8.8" > /etc/resolv.conf
+# echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
 # Set as non-interactive so apt does not prompt for user input
-export DEBIAN_FRONTEND=noninteractive
+export DEBIAN_FRONTEND=noninteractive 
 
 echo Install security updates and apt-utils
 apt-get update
@@ -18,8 +18,8 @@ apt-get -y upgrade
 
 echo Install packages
 apt-get install -y --no-install-recommends linux-image-amd64 live-boot systemd-sysv systemd-resolved systemd-timesyncd
-apt-get install -y e2fsprogs 
-apt install -y --fix-missing zstd clonezilla 
+apt-get install -f -y e2fsprogs  zstd clonezilla 
+
 echo Clean apt post-install
 apt-get clean
 
