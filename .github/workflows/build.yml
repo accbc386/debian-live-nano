@@ -30,12 +30,7 @@ jobs:
         run: |
           ./build.sh
 
-      - name: "Delete latest release."
-        uses: cb80/delrel@latest
-        continue-on-error: true
-        with:
-          tag: latest
-          token: ${{ secrets.GITHUB_TOKEN }}
+
 
       - name: "Delete date-stamped tag if it already exists."
         uses: cb80/delrel@latest
